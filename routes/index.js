@@ -311,11 +311,44 @@ router.post('/', function(req, res, next) {
     var sum = 4*soldi + 2*data + luogo;
     var payload2 = {};
     if(sum==0 || sum==4){
-      agent.add("Finale Rita");
+      payload2 = {
+        "telegram": {
+          "text": "Finale Rita",
+          "resize_keyboard": true,
+          "reply_markup": {
+            "keyboard": [
+              [
+                {
+                  "text": "Avanti",
+                  "callback_data": "finalee"
+                }
+              ]
+            ]
+          },
+          "one_time_keyboard": true
+        }
+      };
     }
     else{
-      agent.add("Finale Mattia e Luca");
+      payload2 = {
+        "telegram": {
+          "text": "Finale Mattia e Luca",
+          "resize_keyboard": true,
+          "reply_markup": {
+            "keyboard": [
+              [
+                {
+                  "text": "Avanti",
+                  "callback_data": "finalee"
+                }
+              ]
+            ]
+          },
+          "one_time_keyboard": true
+        }
+      };
     }
+    agent.add(new Payload(agent.UNSPECIFIED, payload2,{rawPayload: true, sendAsMessage: true}));
 }
 async function finaleOmar(agent){
   var nome = agent.parameters.nome;
@@ -327,14 +360,63 @@ async function finaleOmar(agent){
     var sum = 4*soldi + 2*data + luogo;
     var payload2 = {};
     if(sum === 1 || sum === 3){
-      agent.add("Finale Gaia");
+      payload2 = {
+        "telegram": {
+          "text": "Finale Gaia",
+          "resize_keyboard": true,
+          "reply_markup": {
+            "keyboard": [
+              [
+                {
+                  "text": "Avanti",
+                  "callback_data": "finalee"
+                }
+              ]
+            ]
+          },
+          "one_time_keyboard": true
+        }
+      };
     }
     else if(sum === 5){
-      agent.add("Finale Rita");
+      payload2 = {
+        "telegram": {
+          "text": "Finale Rita",
+          "resize_keyboard": true,
+          "reply_markup": {
+            "keyboard": [
+              [
+                {
+                  "text": "Avanti",
+                  "callback_data": "finalee"
+                }
+              ]
+            ]
+          },
+          "one_time_keyboard": true
+        }
+      };
     }
     else if(sum === 7){
-      agent.add("Finale Mattia e Luca");
+      payload2 = {
+        "telegram": {
+          "text": "Finale Mattia e Luca",
+          "resize_keyboard": true,
+          "reply_markup": {
+            "keyboard": [
+              [
+                {
+                  "text": "Avanti",
+                  "callback_data": "finalee"
+                }
+              ]
+            ]
+          },
+          "one_time_keyboard": true
+        }
+      };
     }
+    agent.add(new Payload(agent.UNSPECIFIED, payload2,{rawPayload: true, sendAsMessage: true}));
 }
 });
 
