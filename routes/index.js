@@ -318,10 +318,7 @@ router.post('/', function(req, res, next) {
           "reply_markup": {
             "keyboard": [
               [
-                {
-                  "text": "Avanti",
-                  "callback_data": "finalee"
-                }
+                "Crediti"
               ]
             ]
           },
@@ -337,10 +334,7 @@ router.post('/', function(req, res, next) {
           "reply_markup": {
             "keyboard": [
               [
-                {
-                  "text": "Avanti",
-                  "callback_data": "finalee"
-                }
+                "Crediti"
               ]
             ]
           },
@@ -367,10 +361,7 @@ async function finaleOmar(agent){
           "reply_markup": {
             "keyboard": [
               [
-                {
-                  "text": "Avanti",
-                  "callback_data": "finalee"
-                }
+                "Crediti"
               ]
             ]
           },
@@ -386,10 +377,7 @@ async function finaleOmar(agent){
           "reply_markup": {
             "keyboard": [
               [
-                {
-                  "text": "Avanti",
-                  "callback_data": "finalee"
-                }
+                "Crediti"
               ]
             ]
           },
@@ -405,10 +393,7 @@ async function finaleOmar(agent){
           "reply_markup": {
             "keyboard": [
               [
-                {
-                  "text": "Avanti",
-                  "callback_data": "finalee"
-                }
+                "Crediti"
               ]
             ]
           },
